@@ -1,0 +1,68 @@
+<!-- <h1> Welcome to the Take Input Component</h1>
+
+<p> Kindly Give values for below inputs</p>
+
+<div>
+  <label>Name: </label>
+<input name="input1" [(ngModel)]="name" >
+</div>
+
+<div>
+<label>Price: </label>
+<input name="input1" [(ngModel)]="price">
+</div>
+
+<div>
+<label>Comment </label>
+<input name="input1" [(ngModel)]="comment">
+</div> -->
+
+<mat-form-field apparence="legacy">
+  <mat-label>Name</mat-label>
+  <input matInput [(ngModel)]="name" type="text" name="newuserName" id="newuserName" class="form-control" required>
+  </mat-form-field><br>
+
+  <mat-form-field apparence="legacy">
+    <mat-label>Image</mat-label>
+    <input matInput [(ngModel)]="image" type="text" name="image" id="image" class="form-control" required>
+    </mat-form-field><br>
+
+  <mat-form-field apparence="legacy">
+  <mat-label>Price</mat-label>
+  <input matInput [(ngModel)]="price" type="text" name="price" id="price" class="form-control" required>
+  </mat-form-field><br>
+
+  <label>Eggless: </label>
+  <input [(ngModel)]="eggless" type="checkbox" class="form-contorl">
+
+
+  <div class="input-group mb-3">
+    <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+  </div>
+
+  <button mat-raised-button color="primary" (click)="addCake()">Add Cake</button>
+  <button mat-raised-button color="primary" (click)="sortasc()">Low to High</button>
+  <button mat-raised-button color="primary" (click)="sortdsc()">High to Low</button>
+  <button mat-raised-button color="primary" (click)="applyfilter()">Select for Eggless</button>
+<app-datatable [data]="cakes"></app-datatable>
+
+  <!-- <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Image</th>
+        <th scope="col">Eggless</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let each of cakes">
+        <th scope="row">1</th>
+        <td>{{each.name}}</td>
+        <td>{{each.price}}</td>
+        <td><img [src]="each.image"></td>
+        <td>{{each.eggless}}</td>
+      </tr>
+    </tbody>
+  </table> -->

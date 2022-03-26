@@ -1,0 +1,16 @@
+<div class="cart-container">
+  <div class="cake-name"> {{ cake.name }}</div>
+  <div class="cart-item-container">
+    <img [src]="cake.image" alt="cake" />
+    <div class="cart-actions">
+      <p>Quantity</p>
+      <div>
+        <button class="btn btn-primary" [disabled]="cake.quantity === 1"
+        (click)="decrementQty()">
+      </button>
+      <p>{{ cake.quantity }}</p>
+      <button class="btn btn-primary" (click)="incrementQty()"></button>
+      </div>
+    </div>
+  </div>
+</div>

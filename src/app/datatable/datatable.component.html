@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let each of data">
+      <th scope="row">1</th>
+      <td>{{each.name}}</td>
+      <td>{{each.price}}</td>
+      <td><img [src]="each.image"></td>
+    </tr>
+  </tbody>
+</table>

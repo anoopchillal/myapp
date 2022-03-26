@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Login Here</h1>
+  {{anoop.valid}}
+<form #anoop="ngForm" (submit)="anoop.valid && login()" >
+  <div class="form-group">
+      <label for="email" class="form-label">Email</label>
+      <input required minlength="10" #abc="ngModel" [(ngModel)]="user.email" type="email" class="form-control" name="email">
+      <div style="color:red" *ngIf="anoop.submitted && abc.errors">
+      <label *ngIf="abc.errors['required']">EMail is Required</label>
+      <label *ngIf="abc.errors['minlength']">Email is less than or more than 10</label>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="email" class="form-label">Password</label>
+      <input #raj="ngModel" [(ngModel)]="user.password" type="password" class="form-control" name="password">
+  </div>
+  <div>
+      <button (click)="login()" class="btn btn-primary">Login</button>
+  </div>
+</form>
+</div>

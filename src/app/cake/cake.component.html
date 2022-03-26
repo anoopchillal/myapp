@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <img [routerLink]="['/detail',cake.cakeid]" style="height: 13rem;" [src]="cake.image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Cake:{{cake.name}}</h5>
+    <p class="card-text">Price:{{cake.price} | currency:'INR'}</p>
+    <!-- <label>Eggless: </label>
+    <input type="checkbox" (click)="show()">
+    <p>Chosen cake is Eggless:- {{cake.eggless}}</p> -->
+    <label *ngIf="cake.eggless" class="btn btn-success">Eggless</label>
+  </div>
+</div>

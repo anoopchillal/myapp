@@ -1,0 +1,14 @@
+<div class="details-container">
+  <div class="cake-image">
+    {{ cakedetails.image }}
+  </div>
+  <div class="description">
+    <h3 class="cake-name">{{ cakedetails.name }}</h3>
+    <div class="cake-rating">Ratings : {{ cakedetails.ratings }}/5</div>
+    <p>{{ cakedetails.description }}</p>
+    <ul>
+      <li *ngFor="let x of cakedetails.ingredients">{{ x }}</li>
+    </ul>
+    <button class="btn btn-primary" (click)="addToCart()">Add to Cart</button>
+  </div>
+</div>

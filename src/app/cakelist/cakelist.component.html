@@ -1,0 +1,37 @@
+<!-- <div class="box">
+  <div class="row">
+    <app-cake *ngFor="let each of object" [cake]="each" class="col-md-3"></app-cake>
+    <div class="col">
+      <app-cake [cake]="object1"></app-cake>
+    </div>
+    <div class="col">
+      <app-cake [cake]="object2"></app-cake>
+    </div>
+
+    <div class="col">
+      <app-cake [cake]="object3"></app-cake>
+    </div>
+
+    <div class="col">
+      <app-cake [cake]="object4"></app-cake>
+    </div>
+
+    <div class="col">
+      <app-cake [cake]="object5"></app-cake>
+    </div>
+
+    <div class="col">
+      <app-cake [cake]="object6"></app-cake>
+    </div>
+
+  </div>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let cake of object" style="margin: 10px">
+      <app-cake [cake]="cake"></app-cake>
+
+    </div>
+  </div>
+</div>
+<app-cakedetails></app-cakedetails>
